@@ -1,10 +1,10 @@
-/* คอนเทนเนอร์หน้าตั้งค่า — <div className="setting-user"> */
+/* คอนเทนเนอร์หน้าตั้งค่า */
 .setting-user {
   padding: 1.5rem;
   box-sizing: border-box;
 }
 
-/* ชื่อหน้า “SETTING USER - {name}” — <h1 className="page-title"> */
+/* ชื่อหน้า “SETTING USER - {name}” */
 .page-title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -13,7 +13,7 @@
   margin: 0 0 20px;
 }
 
-/* แถบบนขวา (ไอคอนภาษา/แจ้งเตือน/ตั้งค่า) — ดูใน <div className="page-topbar"><div className="top-icons"> */
+/* แถบบนขวา (ไอคอนภาษา/แจ้งเตือน/ตั้งค่า) */
 .page-topbar {
   height: 8px;
   display: flex;
@@ -33,7 +33,7 @@
   opacity: .9;
 }
 
-/* การ์ดฟอร์ม — <form className="form-card"> ครอบทุก input */
+/* การ์ดฟอร์ม */
 .form-card {
   background: #fff;
   border: 1px solid #eef1f4;
@@ -44,14 +44,14 @@
   max-width: none;
 }
 
-/* กริดฟอร์ม 2 คอลัมน์บนจอใหญ่ — <div className="form-grid"> */
+/* กริดฟอร์ม 2 คอลัมน์บนจอใหญ่ */
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
   gap: 20px 24px;
 }
 
-/* ช่องฟิลด์และฉลาก — <div className="field"><label/><input/></div> */
+/* ช่องฟิลด์ */
 .field { display: flex; flex-direction: column; min-width: 0; }
 .field label {
   font-size: 0.9rem;
@@ -75,7 +75,7 @@
   box-shadow: 0 0 0 2px rgba(0,119,204,.1);
 }
 
-/* ปุ่มด้านล่าง (CANCEL / SAVE) — <div className="actions-wrapper"><button className="btn ..."> */
+/* ปุ่มด้านล่าง (CANCEL / SAVE) */
 .actions-wrapper {
   display: flex;
   justify-content: flex-end;
@@ -98,13 +98,13 @@
   cursor: pointer;
   font-size: 0.9rem;
 }
-/* ปุ่ม Ghost = ยกเลิก */
+/* ปุ่มยกเลิก */
 .btn.ghost {
   background: #fff;
   color: #374151;
   border-color: #ddd;
 }
-/* ปุ่ม Primary = บันทึก */
+/* ปุ่มบันทึก */
 .btn.primary {
   background: #111827;
   color: #fff;

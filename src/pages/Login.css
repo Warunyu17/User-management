@@ -1,7 +1,7 @@
 /* โหลดฟอนต์ที่ใช้ทั้งหน้า Login */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* ตัวครอบทั้งหน้า Login — <div className="login-container"> */
+/* ตัวครอบทั้งหน้า Login */
 .login-container {
   font-family: 'Inter', sans-serif;
   display: flex;
@@ -11,14 +11,14 @@
   background-color: #f4f6f8;
 }
 
-/* โลโก้บนกล่อง — <img className="login-logo" /> */
+/* โลโก้บนกล่อง */
 .login-logo {
   width: 150px;
   height: 50px;
   object-fit: contain;
 }
 
-/* กล่องฟอร์มเข้าสู่ระบบ — <div className="login-box"> */
+/* กล่องฟอร์มเข้าสู่ระบบ */
 .login-box {
   background-color: white;
   padding: 2rem;
@@ -28,7 +28,7 @@
   text-align: center;
 }
 
-/* หัวข้อ “Sign in” — <h3 className="login-title"> */
+/* หัวข้อ “Sign in” */
 .login-title {
   margin: 0 auto 1rem auto;
   color: #333;
@@ -39,13 +39,13 @@
   font-size: 1.2rem;
 }
 
-/* ฟอร์มรวม — <form className="login-form"> */
+/* ฟอร์มรวม */
 .login-form {
   display: flex;
   flex-direction: column;
 }
 
-/* ช่องกรอก username/password ทั่วไป — <input className="login-input"> */
+/* ช่องกรอก username/password ทั่วไป*/
 .login-input {
   width: 100%;
   padding: 0.75rem 0.75rem;
@@ -60,18 +60,18 @@
   outline: none;
 }
 
-/* ครอบ input password + ปุ่ม toggle — <div className="password-wrapper"> */
+/* ครอบ input password + ปุ่ม toggle */
 .password-wrapper {
   position: relative;
   width: 100%;
   margin-bottom: 1rem;
 }
-/* เพิ่มช่องว่างด้านขวาให้ไอคอนตา — .password-wrapper .login-input */
+/* เพิ่มช่องว่างด้านขวาให้ไอคอนตา */
 .password-wrapper .login-input {
   padding-right: 40px;
   margin-bottom: 0;
 }
-/* ไอคอนโชว์/ซ่อนรหัส — <img className="password-toggle-icon"> */
+/* ไอคอนโชว์/ซ่อนรหัส */
 .password-toggle-icon {
   position: absolute;
   right: 12px;
@@ -87,7 +87,7 @@
   opacity: 1;
 }
 
-/* ปุ่ม Login — <button className="login-button"><span>Login</span></button> */
+/* ปุ่ม Login */
 .login-button {
   background: #00bcd4;
   color: white;

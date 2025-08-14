@@ -3,12 +3,12 @@
   --sidebar-width: 250px;
 }
 
-/* คอนเทนเนอร์ระดับบนสุด (เผื่ออนาคต) — <div className="app"> */
+/* คอนเทนเนอร์ระดับบนสุด (เผื่ออนาคต) */
 .app {
   display: block;
 }
 
-/* พื้นที่คอนเทนต์หลักขวาของ Sidebar — <div className="main-content"> ใน App.js */
+/* พื้นที่คอนเทนต์หลักขวาของ Sidebar ใน App.js */
 .main-content {
   margin-left: var(--sidebar-width);
   padding: 24px 28px 28px;

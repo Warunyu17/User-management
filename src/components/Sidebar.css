@@ -1,4 +1,4 @@
-/* กล่อง sidebar หลักที่ครอบเมนูทั้งหมด — <div className={`sidebar ${isOpen ? "open" : ""}`}> */
+/* กล่อง sidebar หลักที่ครอบเมนูทั้งหมด */
 .sidebar {
   position: fixed;
   left: 0;
@@ -13,7 +13,7 @@
   z-index: 1000;
 }
 
-/* โซนโลโก้ — <div className="logo-container"><img className="logo-img" /></div> */
+/* โซนโลโก้ */
 .logo-container {
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@
   height: auto;
 }
 
-/* หัวข้อหมวดเมนู “Overview” — <div className="sidebar-heading">Overview</div> */
+/* หัวข้อหมวดเมนู “Overview” */
 .sidebar-heading {
   font-size: 13px;
   font-weight: bold;
@@ -34,7 +34,7 @@
   letter-spacing: 1px;
 }
 
-/* รายการลิงก์เมนู — <nav><NavLink .../></nav> */
+/* รายการลิงก์เมนู */
 nav {
   display: flex;
   flex-direction: column;
@@ -49,7 +49,7 @@ nav a {
   font-size: 15px;
   transition: background 0.2s, color 0.2s;
 }
-/* ไอคอนในลิงก์เมนู — <img className="icon" /> */
+/* ไอคอนในลิงก์เมนู */
 nav a img.icon {
   width: 20px;
   height: 20px;
@@ -57,7 +57,7 @@ nav a img.icon {
   transition: filter 0.2s;
 }
 
-/* โฮเวอร์ลิงก์ในแถบเมนู — เน้นสีเขียว */
+/* โฮเวอร์ลิงก์ในแถบเมนู */
 nav a:hover {
   background-color: #e8f5e9;
   color: #28a745;
@@ -66,7 +66,7 @@ nav a:hover img.icon {
   filter: invert(43%) sepia(95%) saturate(431%) hue-rotate(93deg) brightness(92%) contrast(88%);
 }
 
-/* สถานะ active ของ NavLink — เมื่อ route ตรงกับลิงก์ */
+/* สถานะ active ของ NavLink */
 nav a.active {
   background-color: #e8f5e9;
   color: #28a745;
@@ -76,7 +76,7 @@ nav a.active img.icon {
   filter: invert(43%) sepia(95%) saturate(431%) hue-rotate(93deg) brightness(92%) contrast(88%);
 }
 
-/* ปุ่มเมนูมือถือ (Hamburger) — <button className="mobile-menu-btn"> */
+/* ปุ่มเมนูมือถือ (Hamburger) */
 .mobile-menu-btn {
   display: none;
   font-size: 26px;
@@ -91,15 +91,15 @@ nav a.active img.icon {
   z-index: 1001;
 }
 
-/* โหมดหน้าจอเล็ก — ควบคุม slide-in ของ sidebar และโชว์ปุ่ม hamburger */
+/* โหมดหน้าจอเล็ก */
 @media (max-width: 768px) {
-  /* ซ่อน sidebar ออกไปด้านซ้ายเมื่อยังไม่ open */
+  /* ซ่อน sidebar */
   .sidebar {
     transform: translateX(-105%);
     z-index: 1000;
-    padding-top: 60px; /* เว้นที่ให้ปุ่มบนสุด */
+    padding-top: 60px;
   }
-  /* โชว์ sidebar เมื่อ state isOpen === true (มีคลาส .open) */
+  /* โชว์ sidebar */
   .sidebar.open {
     transform: translateX(0);
   }
