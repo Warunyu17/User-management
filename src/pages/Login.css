@@ -1,0 +1,107 @@
+/* โหลดฟอนต์ที่ใช้ทั้งหน้า Login */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ตัวครอบทั้งหน้า Login — <div className="login-container"> */
+.login-container {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f6f8;
+}
+
+/* โลโก้บนกล่อง — <img className="login-logo" /> */
+.login-logo {
+  width: 150px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* กล่องฟอร์มเข้าสู่ระบบ — <div className="login-box"> */
+.login-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 500px;
+  text-align: center;
+}
+
+/* หัวข้อ “Sign in” — <h3 className="login-title"> */
+.login-title {
+  margin: 0 auto 1rem auto;
+  color: #333;
+  font-weight: 700;
+  width: 70px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 1.2rem;
+}
+
+/* ฟอร์มรวม — <form className="login-form"> */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ช่องกรอก username/password ทั่วไป — <input className="login-input"> */
+.login-input {
+  width: 100%;
+  padding: 0.75rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+.login-input:focus {
+  border-color: #00bcd4;
+  outline: none;
+}
+
+/* ครอบ input password + ปุ่ม toggle — <div className="password-wrapper"> */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+/* เพิ่มช่องว่างด้านขวาให้ไอคอนตา — .password-wrapper .login-input */
+.password-wrapper .login-input {
+  padding-right: 40px;
+  margin-bottom: 0;
+}
+/* ไอคอนโชว์/ซ่อนรหัส — <img className="password-toggle-icon"> */
+.password-toggle-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+.password-toggle-icon:hover {
+  opacity: 1;
+}
+
+/* ปุ่ม Login — <button className="login-button"><span>Login</span></button> */
+.login-button {
+  background: #00bcd4;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-button:hover {
+  background: #0097a7;
+}

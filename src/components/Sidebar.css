@@ -1,0 +1,113 @@
+/* กล่อง sidebar หลักที่ครอบเมนูทั้งหมด — <div className={`sidebar ${isOpen ? "open" : ""}`}> */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: #fff;
+  color: #000;
+  padding: 1.5rem 1rem;
+  border-right: 1px solid #e5e7eb;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.04);
+  z-index: 1000;
+}
+
+/* โซนโลโก้ — <div className="logo-container"><img className="logo-img" /></div> */
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.logo-img {
+  max-width: 140px;
+  height: auto;
+}
+
+/* หัวข้อหมวดเมนู “Overview” — <div className="sidebar-heading">Overview</div> */
+.sidebar-heading {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem;
+  text-transform: uppercase;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+/* รายการลิงก์เมนู — <nav><NavLink .../></nav> */
+nav {
+  display: flex;
+  flex-direction: column;
+}
+nav a {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+  color: #333;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: background 0.2s, color 0.2s;
+}
+/* ไอคอนในลิงก์เมนู — <img className="icon" /> */
+nav a img.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.7rem;
+  transition: filter 0.2s;
+}
+
+/* โฮเวอร์ลิงก์ในแถบเมนู — เน้นสีเขียว */
+nav a:hover {
+  background-color: #e8f5e9;
+  color: #28a745;
+}
+nav a:hover img.icon {
+  filter: invert(43%) sepia(95%) saturate(431%) hue-rotate(93deg) brightness(92%) contrast(88%);
+}
+
+/* สถานะ active ของ NavLink — เมื่อ route ตรงกับลิงก์ */
+nav a.active {
+  background-color: #e8f5e9;
+  color: #28a745;
+  font-weight: 500;
+}
+nav a.active img.icon {
+  filter: invert(43%) sepia(95%) saturate(431%) hue-rotate(93deg) brightness(92%) contrast(88%);
+}
+
+/* ปุ่มเมนูมือถือ (Hamburger) — <button className="mobile-menu-btn"> */
+.mobile-menu-btn {
+  display: none;
+  font-size: 26px;
+  color: black;
+  background: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+}
+
+/* โหมดหน้าจอเล็ก — ควบคุม slide-in ของ sidebar และโชว์ปุ่ม hamburger */
+@media (max-width: 768px) {
+  /* ซ่อน sidebar ออกไปด้านซ้ายเมื่อยังไม่ open */
+  .sidebar {
+    transform: translateX(-105%);
+    z-index: 1000;
+    padding-top: 60px; /* เว้นที่ให้ปุ่มบนสุด */
+  }
+  /* โชว์ sidebar เมื่อ state isOpen === true (มีคลาส .open) */
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .mobile-menu-btn {
+    display: block;
+    left: 30px;
+  }
+  .logo-container {
+    margin-top: 0.5rem;
+  }
+}

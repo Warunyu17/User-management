@@ -1,0 +1,128 @@
+/* คอนเทนเนอร์หน้าตั้งค่า — <div className="setting-user"> */
+.setting-user {
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* ชื่อหน้า “SETTING USER - {name}” — <h1 className="page-title"> */
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+  color: #1f2937;
+  margin: 0 0 20px;
+}
+
+/* แถบบนขวา (ไอคอนภาษา/แจ้งเตือน/ตั้งค่า) — ดูใน <div className="page-topbar"><div className="top-icons"> */
+.page-topbar {
+  height: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 6px;
+}
+.top-icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.top-icons img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  opacity: .9;
+}
+
+/* การ์ดฟอร์ม — <form className="form-card"> ครอบทุก input */
+.form-card {
+  background: #fff;
+  border: 1px solid #eef1f4;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(17,24,39,.04);
+  padding: 20px;
+  width: 100%;
+  max-width: none;
+}
+
+/* กริดฟอร์ม 2 คอลัมน์บนจอใหญ่ — <div className="form-grid"> */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 20px 24px;
+}
+
+/* ช่องฟิลด์และฉลาก — <div className="field"><label/><input/></div> */
+.field { display: flex; flex-direction: column; min-width: 0; }
+.field label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+.field input {
+  height: 48px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  outline: none;
+  background: #fff;
+  box-sizing: border-box;
+}
+/* โฟกัส input ให้มีแสงสีฟ้า */
+.field input:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 0 2px rgba(0,119,204,.1);
+}
+
+/* ปุ่มด้านล่าง (CANCEL / SAVE) — <div className="actions-wrapper"><button className="btn ..."> */
+.actions-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.actions-wrapper .btn {
+  min-width: 100px;
+  text-align: center;
+}
+
+.btn {
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  letter-spacing: .2px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+/* ปุ่ม Ghost = ยกเลิก */
+.btn.ghost {
+  background: #fff;
+  color: #374151;
+  border-color: #ddd;
+}
+/* ปุ่ม Primary = บันทึก */
+.btn.primary {
+  background: #111827;
+  color: #fff;
+}
+.btn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+/* มือถือ — สลับกริดเป็น 1 คอลัมน์ */
+@media (max-width: 768px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .page-topbar { margin-top: -15px; }
+  .page-title { margin-top: 18px; }
+}

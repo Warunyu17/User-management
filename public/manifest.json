@@ -1,0 +1,11 @@
+{
+  "short_name": "UserMgmt",
+  "name": "User Management",
+  "icons": [
+    {
+      "src": "pictures/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

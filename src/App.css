@@ -1,0 +1,33 @@
+/* ตัวแปรความกว้าง sidebar ที่ใช้ทั้งแอป — อ้างใน .main-content และ .sidebar */
+:root {
+  --sidebar-width: 250px;
+}
+
+/* คอนเทนเนอร์ระดับบนสุด (เผื่ออนาคต) — <div className="app"> */
+.app {
+  display: block;
+}
+
+/* พื้นที่คอนเทนต์หลักขวาของ Sidebar — <div className="main-content"> ใน App.js */
+.main-content {
+  margin-left: var(--sidebar-width);
+  padding: 24px 28px 28px;
+  min-height: 100vh;
+  background: #fff;
+  box-sizing: border-box;
+  width: calc(100% - var(--sidebar-width));
+}
+
+/* บนมือถือ เอา margin-left ออกเพื่อให้เต็มจอ */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 25px;
+  }
+}
+
+/* รีเซ็ตกล่อง */
+*, *::before, *::after { box-sizing: border-box; }
+/* รีเซ็ตเอกสารหลัก */
+html, body { height: 100%; margin: 0; }

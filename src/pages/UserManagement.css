@@ -1,0 +1,175 @@
+/* คอนเทนเนอร์หน้า — <div className="user-management"> */
+.user-management {
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* ชื่อหน้า “USER MANAGEMENT” — <h1 className="page-title"> */
+.page-title { 
+  font-size: 1.5rem; 
+  font-weight: 700; 
+  letter-spacing: .3px; 
+  color: #1f2937; 
+}
+
+/* การ์ดสถิติบนสุด — <div className="stats-container"><div className="stat-card">... */
+.stats-container { 
+  display: grid; 
+  grid-template-columns: repeat(2, minmax(260px, 1fr)); 
+  gap: 16px; 
+  margin-bottom: 16px; 
+}
+.stat-card { 
+  display: flex; 
+  align-items: center; 
+  gap: 24px; 
+  background: #fff; 
+  border: 1px solid #e7edf3; 
+  border-radius: 14px; 
+  padding: 22px 24px; 
+  box-shadow: 0 2px 10px rgba(17,24,39,.04); 
+}
+/* วงกลมไอคอนในสถิติ — <div className="icon blue|green"><img/></div> */
+.icon { 
+  width: 64px; 
+  height: 64px; 
+  border-radius: 9999px; 
+  display: grid; 
+  place-items: center; 
+}
+.icon.blue { background: #def6ff; }
+.icon.green { background: #dcf7e8; }
+.icon img { width: 28px; height: 28px; display: block; }
+/* โทนสีไอคอนด้วย filter ตามสีการ์ด */
+.icon.blue img { filter: brightness(0) saturate(100%) invert(55%) sepia(66%) saturate(1212%) hue-rotate(146deg) brightness(93%) contrast(92%); }
+.icon.green img { filter: brightness(0) saturate(100%) invert(63%) sepia(16%) saturate(1074%) hue-rotate(92deg) brightness(90%) contrast(88%); }
+/* ข้อความสถิติ — <div className="stat-text"><p/><span/></div> */
+.stat-text p { margin: 0 0 6px 0; font-size: 12px; font-weight: 800; letter-spacing: .6px; color: #6b7280; text-transform: uppercase; }
+.stat-text span { line-height: 1; font-size: 30px; font-weight: 800; color: #0f172a; }
+/* สีค่าตัวเลขตามสีการ์ด */
+.stat-card .icon.blue + .stat-text span { color: #05b5c9; }
+.stat-card .icon.green + .stat-text span { color: #39b487; }
+
+/* กล่องตารางรวม — ครอบ header/table/footer : <div className="table-wrapper"> */
+.table-wrapper {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #eef1f4;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.03);
+}
+
+/* ส่วนหัวตารางที่มีช่องค้นหา — <div className="table-header"><div className="search-inline"> */
+.table-header {
+  padding: 12px;
+  background: #fff;
+}
+/* ช่องค้นหาแทรกไอคอน — <div className="search-inline"><span className="search-ico"><img/></span><input/></div> */
+.search-inline {
+  position: relative;
+  width: 100%;
+}
+.search-inline input {
+  width: 100%;
+  height: 46px;
+  box-sizing: border-box;
+  display: block;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0 14px 0 44px; /* เผื่อพื้นที่ไอคอนด้านซ้าย */
+  background: #fff;
+  font-size: .95rem;
+}
+.search-inline input:focus {
+  outline: none;
+  border-color: #2b7de9;
+  box-shadow: 0 0 0 3px rgba(43,125,233,.08);
+}
+.search-inline .search-ico {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px; 
+  height: 18px;
+  display: grid; 
+  place-items: center;
+  pointer-events: none;
+}
+.search-inline .search-ico img {
+  width: 18px; 
+  height: 18px; 
+  display: block;
+}
+.search-inline input::placeholder { 
+  text-transform: uppercase; 
+  letter-spacing: .4px; 
+  color: #6b7280; 
+}
+
+/* ตารางผู้ใช้ — <table className="user-table"> (หัวตาราง/บรรทัด/สถานะ) */
+.user-table { width: 100%; border-collapse: collapse; }
+.user-table thead th {
+  padding: 14px 16px; 
+  background: #f2f5f8; 
+  color: #6b7280; 
+  font-weight: 800; 
+  font-size: 12px; 
+  letter-spacing: .3px; 
+  text-transform: uppercase; 
+  text-align: left;
+}
+.user-table tbody td { padding: 16px; border-bottom: 1px dotted #e7edf3; }
+.user-table tbody tr:last-child td { border-bottom: none; }
+.empty-row { text-align: center; color: #9aa0a6; padding: 26px 0; }
+
+/* ป้ายสถานะ ACTIVE/INACTIVE — <span className={`status ${u.active ? "active" : "inactive"}`}> */
+.status { padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; letter-spacing: .2px; }
+.status.active { background: #e6f7ef; color: #22a06b; }
+.status.inactive { background: #ffe9e9; color: #d83a3a; }
+
+/* ส่วนท้ายตาราง (pager & rows-per-page) — <div className="table-footer"> */
+.table-footer {
+  display: flex; justify-content: flex-end; align-items: center; gap: .8rem;
+  padding: .7rem 1rem; border-top: 1px solid #eef1f4; color: #6b7380; font-size: .95rem; background: #fff; border-radius: 0 0 12px 12px;
+}
+/* “Row per page” + select — <div className="rp-select"><select/><span className="rp-caret"> */
+.range { white-space: nowrap; }
+.rp-select { position: relative; display: inline-block; }
+.rp-select select { appearance: none; border: none; background: transparent; padding-right: 18px; padding-left: 0; font: inherit; color: #2d3748; cursor: pointer; }
+.rp-select select:focus { outline: none; }
+.rp-select .rp-caret { position: absolute; right: 0; top: 50%; transform: translateY(-50%); pointer-events: none; color: #6b7380; font-size: .9rem; line-height: 1; }
+/* ปุ่มเปลี่ยนหน้า — <button className="pager-plain">‹/›</button> */
+.pager-plain { border: none; background: transparent; color: #6b7380; font-size: 1.05rem; padding: 0 .1rem; line-height: 1; cursor: pointer; }
+.pager-plain:disabled { opacity: .4; cursor: not-allowed; }
+
+/* แถบบนขวาของหน้า (ไอคอน) — แชร์กับ SettingUser: <div className="page-topbar"><div className="top-icons"> */
+.page-topbar {
+  height: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 6px;
+}
+.top-icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.top-icons img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  opacity: .9;
+}
+
+/* ลิงก์ชื่อผู้ใช้ในคอลัมน์ NAME — <Link className="name-link"> */
+.name-link { color: #111827; text-decoration: none; font-weight: 600; }
+.name-link:hover { text-decoration: underline; }
+
+/* มือถือ — ปรับสถิติเป็น 1 คอลัมน์ */
+@media (max-width:768px) {
+  .stats-container { grid-template-columns: 1fr; }
+  .page-topbar { margin-top: -15px; }
+  .page-title { margin-top: 15px; }
+}
